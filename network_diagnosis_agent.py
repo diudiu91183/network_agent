@@ -7,13 +7,14 @@ from langchain.agents import create_agent
 from langchain_community.chat_models import ChatTongyi
 import dashscope
 # 从环境变量获取 dashscope 的 API Key
-api_key = os.environ.get('DASHSCOPE_API_KEY')
+api_key = 'sk-7b05a65d0ec844d2878a153e50c8d92c'
+# api_key = os.environ.get('DASHSCOPE_API_KEY')
 dashscope.api_key = api_key
 
 # --- 环境设置 ---
 # 确保设置了您的通义千问 API 密钥
 # 您可以通过环境变量 DASHSCOPE_API_KEY 设置，或者直接在这里修改
-DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY', 'sk-7b05a65d0ec844d2878a153e50c8d92c')
+# DASHSCOPE_API_KEY = os.getenv('DASHSCOPE_API_KEY', 'sk-7b05a65d0ec844d2878a153e50c8d92c')
 # 为方便演示，我们直接在此处硬编码 (请注意在生产环境中保护好您的密钥)
 # DASHSCOPE_API_KEY = os.getenv("DASHSCOPE_API_KEY")
 
@@ -190,4 +191,5 @@ def diagnose_network_issue(issue_description: str):
 #     print("诊断任务 4:")
 #     result4 = diagnose_network_issue(task4)
 #     print("\n--- 诊断任务 4 结束 ---")
+
 #     print(f"最终诊断结果: {result4}")
